@@ -12,7 +12,6 @@ public class Main {
         System.out.println(vardas.repeat(5));
         System.out.println(vardas.split(" "));
         System.out.println(vardas.trim());
-        System.out.println(vardas.substring(2, 4));
         System.out.println(vardas.substring(4));
         System.out.println(vardas.substring(vardas.length() - 3));
         System.out.println(vardas.length());
@@ -41,6 +40,53 @@ public class Main {
             phoNo = phoNo.substring(1);
         }
         System.out.println(phoNo);
+        System.out.println("____________________________________________________________________________________________________________");
 
+        String names1 = "Jevgenij";
+        String surName1 = "Diomin";
+        int name2 = names1.length();
+        int surName2 = surName1.length();
+        if(name2 > surName2) {
+            System.out.println(surName1);
+        }else {
+            System.out.println(names1);
+        }
+        System.out.println("____________________________________________________________________________________________________________");
+        System.out.println(surName1.toLowerCase());
+        System.out.println(names1.toUpperCase());
+        System.out.println("____________________________________________________________________________________________________________");
+        String nameSur3;
+        nameSur3 =  names1.charAt(0) + "" + surName1.charAt(0) ;
+        System.out.println(nameSur3);
+        System.out.println("_______________4_____________________________________________________________________________________________");
+
+        String nameSur4 = "";
+        int length12 = names1.length();
+        int length13 = surName1.length();
+        System.out.println(length12);
+        System.out.println(length13);
+        nameSur4 += names1.substring(length12-3);
+        nameSur4 += surName1.substring(length13-3);
+
+
+
+       System.out.println(nameSur4);
+        System.out.println("____________________________________________________________________________________________________________");
+
+       String aap = "An American in Paris";
+        System.out.println(aap.replaceAll("[Aa]", "*"));
+        System.out.println("____________________________________________________________________________________________________________");
+        System.out.println(aap.replaceAll("[AaOoEeUuYyIi]", ""));
+        String aap1 = "Breakfast at Tiffany's";
+        String aap2 = "2001: A Space Odyssey";
+        String aap3 = "It's a Wonderful Life";
+        System.out.println(aap1.replaceAll("[A a O o E e U u Y y I i]", ""));
+        System.out.println(aap2.replaceAll("[A a O o E e U u Y y I i]", ""));
+        System.out.println(aap3.replaceAll("[A a O o E e U u Y y I i]", ""));
+        System.out.println("____________________________________________________________________________________________________________");
+
+        String starWars = "Star Wars: Episode "+ " ".repeat( (int) (Math.random() * 10))+((int) (Math.random() * 7)+1) + " - A New Hope";
+        System.out.println(starWars);
+        System.out.println(starWars.replaceAll("[^?[0-9]]" , ""));
     }
 }
